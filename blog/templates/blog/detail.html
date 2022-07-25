@@ -1,14 +1,118 @@
 {% extends 'blog/base.html' %}
 <meta charset="utf-8" />
+
 {% block head_title %}
 {{good.name}} - shopping
 {% endblock %}
 
 {% block main_area %}
-<h1>
-    메인 영역이다.
-</h1>
-<h2>{{ good.name }}</h2>
-<h3>{{ good.created_at }}</h3>
-<h5>{{ good.price }}</h5>
+<div class="container-md">
+    <div class="row ">
+        <div class="col mb-2">
+            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <div class="row mt-3 btn-outline-dark">
+                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+                    width=190px, height=150px>
+                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+                    width=190px, height=150px>
+                <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png"
+                    width=190px, height=150px>
+            </div>
+        </div>
+
+        <div class="col">
+            <h2>업텐션 레깅스</h2>
+            <div class="">
+                <span class="badge text-bg-primary">Primary</span>
+                <span class="badge text-bg-secondary">Secondary</span>
+                <span class="badge text-bg-success">Success</span>
+                <span class="badge text-bg-danger">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+            </div>
+            <br>
+            <div class="">
+                <p>[7/28(화)] 2시까지 데일리 특가!</p>
+                <p>누적 판매 500만장 퍼펙트핏 퍼포먼스 레깅스</p>
+            </div>
+            <br>
+            <div class="d-flex justify-content-between">
+                <div>xp5815t</div>
+                <div>추가혜택</div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between">
+                <div>판매가</div>
+                <div>28000원</div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div>포인트</div>
+                <div>1% ~ 최대 5%</div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div>선택1</div>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>옵션 선택</option>
+                        <option value="1">사이즈 S</option>
+                        <option value="2">사이즈 M</option>
+                        <option value="3">사이즈 L</option>
+                        <option value="3">사이즈 XL</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div>추가 상품</div>
+                <div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>옵션 선택</option>
+                        <option value="1">양말 Black</option>
+                        <option value="2">양말 White</option>
+                    </select>
+                </div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between">
+                <div>총 합계</div>
+                <div>29000</div>
+            </div>
+            <br>
+            <br>
+            <div class="col">
+                <div class="row">
+                    <div class="col-6 p-2 text-center btn btn-outline-dark mb-2">장바구니</div>
+                    <div class="col-6 p-2 text-center btn btn-outline-dark mb-2">실시간 매장 재고확인</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-10 text-center p-2 btn btn-dark mb-2">구매하기</div>
+                    <div class="col-2 text-center p-2 btn btn-outline-dark mb-2"><i class="bi bi-heart-fill"></i>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
