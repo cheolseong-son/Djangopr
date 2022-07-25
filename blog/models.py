@@ -14,7 +14,7 @@ class Post(models.Model):
     def __str__(self) -> str:
         return f'[{self.pk}] {self.title}'
 
-# 상품 모델 
+# 상품 모델, 관리자가 상품 게시
 class Good(models.Model):  
     name = models.TextField(max_length=30)  # 상품명
     price = models.IntegerField()           # 가격

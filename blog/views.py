@@ -14,4 +14,16 @@ def index(request):
     )
 # Create your views here.
 
+def detail_goods(request, pk):
+    good = Good.objects.get(pk=pk)
+
+    return render(
+        request, 
+        'blog/detail.html',
+        {
+            'good':good,
+        }
+    )
+
+
 
