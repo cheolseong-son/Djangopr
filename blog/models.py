@@ -1,5 +1,4 @@
-from distutils.command.upload import upload
-from email.mime import image
+
 from django.db import models
 
 # Create your models here.
@@ -28,4 +27,8 @@ class Good(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+    # pk 값 리턴
+    def get_absolute_url(self):
+        return f'{self.pk}/'
 

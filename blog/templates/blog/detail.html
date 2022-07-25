@@ -1,9 +1,14 @@
 {% extends 'blog/base.html' %}
 <meta charset="utf-8" />
-<title>{{ good.name }} - Sonnic Shopping</title>
+{% block head_title %}
+{{good.name}} - shopping
+{% endblock %}
 
-{% block detail_area %}
-
-
-
+{% block main_area %}
+<h1>
+    메인 영역이다.
+</h1>
+<h2>{{ good.name }}</h2>
+<h3>{{ good.created_at }}</h3>
+<h5>{{ good.price }}</h5>
 {% endblock %}
