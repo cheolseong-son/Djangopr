@@ -16,10 +16,11 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
+
 
 # 앱의 views로 보냄
 urlpatterns = [
     path('shopping/', include('blog.urls')),
     path('admin/', admin.site.urls),
+    path('cart/', include('cart.urls')),
 ]

@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+<meta charset="utf-8" />
+
+{% block head_title %}
+상품등록 - shopping
+{% endblock %}
+
+{% block main_area %}
+<div class="container-md pt-3">
+    <h1><i class="fa-solid fa-cart-shopping"></i> 장바구니</h1>
+    <br />
+    <div class="row">
+        <hr />
+        <div class="col-10 row ">
+            <div class="col-2  text-center">
+                <h5>전체선택</h5>
+            </div>
+            <div class="col-8 text-center ">
+                <h5>상품정보</h5>
+            </div>
+            <div class="col-2">
+                <h5>상품금액</h5>
+            </div>
+        </div>
+        <div class="col-2">
+            <h5>배송비</h5>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="col-10">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=90&.v=1567022175704"
+                        width="120" height="100">
+                </div>
+                <div class="col-8 text-center">
+                    <h6>코멧 저자극 시그니처 아기 물티슈 엠보싱 캡형, 100매, 10팩</h6>
+                    <hr />
+                    <h6 class="text-success">내일 도착 </h6>
+                </div>
+                <div class="float-left">
+                    <div class="col">
+                        <p class="text-danger">즉시할인</p>
+                        <p class="fs-6 ">1000000원</p>
+                        <p class="text-info"><i class="fa-regular fa-rocket"></i>로켓배송</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+
+            <p>무료</p>
+        </div>
+    </div>
+    <hr />
+</div>
+{% endblock %}
