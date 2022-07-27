@@ -20,6 +20,8 @@ class Good(models.Model):
 
     # 상품 이미지, 이미지 무조건 올리도록 함(blank=False)
     image = models.ImageField(upload_to = 'blog/image/%Y/%m/%d/', blank=True)
+    sel_1 = models.TextField(blank=True)
+    extra_product = models.TextField(blank=True)
 
     # 상품 게시 날짜와 업데이트 날짜
     created_at = models.DateTimeField(auto_now_add=True)
@@ -34,4 +36,3 @@ class Good(models.Model):
     # pk 값 리턴
     def get_absolute_url(self):
         return f'{self.pk}/'
-

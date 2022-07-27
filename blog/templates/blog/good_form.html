@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+<meta charset="utf-8" />
+
+{% block head_title %}
+상품등록 - shopping
+{% endblock %}
+
+{% block main_area %}
+<h1>create_page</h1>
+
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <button type="submit" class="btn btn-primary ">Submit</button>
+</form>
+
+{% endblock %}
