@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from telnetlib import AUTHENTICATION
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +43,12 @@ INSTALLED_APPS = [
 
     'blog',
     'cart',
+    'shop',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.naver',
     
 ]
 
@@ -85,6 +93,22 @@ DATABASES = {
     }
 }
 
+# 데이터 베이스 aws의 mysql 사용
+# pymysql.version_info = (1, 4, 2, "final", 0)
+# pymysql.install_as_MySQLdb()
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': "database-my-min-project.ccvgslxhxjpi.us-west-2.rds.amazonaws.com",
+#         'NAME': "minionlineshop",
+#         'USER':"admin",
+#         'PASSWORD':'sonny12345',
+#         'PORT': '3306',
+
+#     }
+# }
+# ---------------- 수정 -------------
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -132,3 +156,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 이미지 정장을 위한 장치
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
+
+
+# 로그인 
+AUTHENTICATION_BACKENDS = [
+    
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'

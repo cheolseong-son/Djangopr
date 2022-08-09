@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% block title %} Product deatil {% endblock %}
+
+{% block main_area %}
+<div class="row">
+    <div class="col-4">
+        <img src="{{product.image.url}}" width="100%">
+    </div>
+    <div class="col">
+        <h1 class="display-6">{{ product.name}}</h1>
+        <p><span class="badge badge-secondary">{{ product.price}}</span></p>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Add to Cart">
+        </form>
+        <h5><span class="badge badge-secondaryx">description</span>{{product.description | linebeaks}}</h5>
+    </div>
+</div>
+{% endblock %}

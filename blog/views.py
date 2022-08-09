@@ -37,7 +37,8 @@ class CreatePage(LoginRequiredMixin, CreateView):
             return super(CreatePage, self).form_valid(form)
         else:
             return redirect('/shopping/')
-    
+            
+        # return redirect('/shopping/')
 
 
 

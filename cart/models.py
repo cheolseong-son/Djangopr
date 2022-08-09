@@ -1,7 +1,7 @@
-from itertools import product
-from pyexpat import model
 from django.db import models
 from blog.models import Good
+
+
 # Create your models here.
 class Cart(models.Model):
     cart_id = models.CharField(max_length=200, blank=True)
@@ -21,5 +21,3 @@ class CartItem(models.Model):
 
     def __str__(self):
         return self.product
-
-        

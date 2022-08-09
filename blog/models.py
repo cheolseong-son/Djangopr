@@ -17,7 +17,7 @@ class Post(models.Model):
 
 # 상품 모델, 관리자가 상품 게시
 class Good(models.Model):  
-    name = models.TextField(max_length=30)  # 상품명
+    name = models.TextField(max_length=200)  # 상품명
     price = models.IntegerField()           # 가격
 
     # 상품 이미지, 이미지 무조건 올리도록 함(blank=False)
@@ -35,7 +35,7 @@ class Good(models.Model):
     def __str__(self):
         return f'{self.name} :: {self.author}'
 
-    # pk 값 리턴
+    # pk값 리턴
     def get_absolute_url(self):
         return f'{self.pk}/'
 

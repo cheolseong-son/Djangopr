@@ -19,7 +19,6 @@
                     width=190px, height=150px>
             </div>
         </div>
-
         <div class="col">
             <h2>{{good.name}}</h2>
             <div class="">
@@ -83,16 +82,16 @@
             <div class="d-flex justify-content-between">
                 <div>총 합계</div>
                 <div id="price">{{ good.price }}</div>
+                <h1>{{ good.pk }}</h1>
             </div>
 
             <br>
             <br>
             <div class="col">
                 <div class="row">
-                    <a class="col-6 p-2 text-center btn btn-outline-dark mb-2" href="/cart/">장바구니</a>
+                    <a class="col-6 p-2 text-center btn btn-outline-dark mb-2" href="/cart/add/{{ good.pk }}">장바구니</a>
                     <a class="col-6 p-2 text-center btn btn-outline-dark mb-2">실시간 매장 재고확인</a>
                 </div>
-
                 <div class="row">
                     <div class="col-10 text-center p-2 btn btn-dark mb-2">구매하기</div>
                     <div class="col-2 text-center p-2 btn btn-outline-dark mb-2"><i class="bi bi-heart-fill"></i>
@@ -121,6 +120,7 @@
             </div>
 
         </div>
+
     </div>
 
 </div>

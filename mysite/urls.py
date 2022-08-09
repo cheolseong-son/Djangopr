@@ -20,6 +20,8 @@ from django.urls import path, include
 
 # 앱의 views로 보냄
 urlpatterns = [
+    path('accounts/',  include('allauth.urls')),
+    path('shop/', include('shop.urls')),
     path('shopping/', include('blog.urls')),
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls')),
